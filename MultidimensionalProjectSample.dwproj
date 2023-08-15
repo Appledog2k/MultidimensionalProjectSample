@@ -6,10 +6,63 @@
     <Name>MultidimensionalProjectSample.database</Name>
     <FullPath>MultidimensionalProjectSample.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Adventure Works DW2019.cube</Name>
+      <FullPath>Adventure Works DW2019.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Adventure Works DW2019.partitions</Name>
+          <FullPath>Adventure Works DW2019.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Product.dim</Name>
+      <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Adventure Works DW2019.ds</Name>
+      <FullPath>Adventure Works DW2019.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Adventure Works DW2019.dsv</Name>
+      <FullPath>Adventure Works DW2019.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Adventure Works DW2019</Id>
+            <Name>Adventure Works DW2019</Name>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=APPLEDOGJR\MSSQLSERVER2022;Integrated Security=SSPI;Initial Catalog=AdventureWorksDW2019</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Adventure Works DW2019</Id>
+            <Name>Adventure Works DW2019</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
